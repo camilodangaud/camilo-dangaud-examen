@@ -7,7 +7,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { SharedModule } from './shared/shared.module';
 import { HttpApiInterceptor } from './interceptors/http.interceptor';
 
 @NgModule({
@@ -16,7 +16,8 @@ import { HttpApiInterceptor } from './interceptors/http.interceptor';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule // <-- Agrega aquí
+    HttpClientModule,
+    SharedModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

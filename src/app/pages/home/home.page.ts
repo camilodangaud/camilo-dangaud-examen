@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.newsService.getNews().subscribe((data: any) => {
-      this.news = data.articles; // Ajusta según la estructura de la respuesta
+      this.news = data.articles;
     });
   }
 }
