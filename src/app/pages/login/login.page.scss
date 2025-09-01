@@ -1,0 +1,21 @@
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  img {
+    max-width: 250px;
+    border-radius: 8px;
+  }
+}
+
+.register-link {
+  text-align: center;
+  margin: 12px 0;
+
+  a {
+    color: var(--ion-color-primary);
+    text-decoration: none;
+    font-size: 14px;
+  }
+}
