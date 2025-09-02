@@ -1,25 +1,25 @@
-<app-header title="Noticias" subtitle="Lo más reciente"></app-header>
+<app-sidebar>
+  <app-header title="Noticias" subtitle="Lo más reciente"></app-header>
 
-<ion-content [fullscreen]="true">
-  <!-- Noticias Principales -->
-  <ion-list>
-    <ion-list-header>
-      <ion-label>Noticias Principales</ion-label>
-    </ion-list-header>
-    <app-principal-news [news]="principalNews" [limit]="3"></app-principal-news>
-  </ion-list>
-
-  <!-- Otras Noticias -->
-  <div id="container">
-    <strong>Todas las Noticias</strong>
+  <ion-content [fullscreen]="true">
     <ion-list>
-      <ion-item *ngFor="let item of news | slice:3">
-        <app-card
-          [title]="item.title"
-          [subtitle]="item.author"
-          [content]="item.description">
-        </app-card>
-      </ion-item>
+      <ion-list-header>
+        <ion-label>Noticias Principales</ion-label>
+      </ion-list-header>
+      <app-principal-news [news]="principalNews" [limit]="4"></app-principal-news>
     </ion-list>
-  </div>
-</ion-content>
+
+    <div id="container">
+      <strong>Todas las Noticias</strong>
+      <ion-list>
+        <ion-item *ngFor="let item of news | slice:3">
+          <app-card
+            [title]="item.title"
+            [subtitle]="item.author"
+            [content]="item.description">
+          </app-card>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</app-sidebar>

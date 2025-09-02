@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
   standalone: false,
 })
 export class HeaderComponent {
-  @Input() title: string = 'Mi Aplicación';
+  @Input() title: string = '';
   @Input() subtitle?: string;
 }

@@ -1,34 +1,31 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header title="Login" subtitle="Bienvenido de nuevo"></app-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-
   <form (ngSubmit)="onLogin()">
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
-    </ion-item>
+    <ion-list>
+      <app-input
+        label="Correo"
+        type="email"
+        [(model)]="email"
+        name="email"
+        [required]="true">
+      </app-input>
 
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password" name="password" required></ion-input>
-      <ion-icon
-        slot="end"
-        [name]="showPassword ? 'eye-off' : 'eye'"
-        (click)="togglePassword()">
-      </ion-icon>
-    </ion-item>
-
-    <div class="register-link">
-      <a (click)="goToRegister()">Create an account</a>
-    </div>
+      <app-input
+        label="Contraseña"
+        type="password"
+        [(model)]="password"
+        name="password"
+        [required]="true">
+      </app-input>
+    </ion-list>
 
     <ion-button expand="block" type="submit" [disabled]="!email || !password">
       Sign In
     </ion-button>
-  </form>
 
+    <div class="register-link ion-text-center ion-margin-top">
+      <a (click)="goToRegister()">Create an account</a>
+    </div>
+  </form>
 </ion-content>

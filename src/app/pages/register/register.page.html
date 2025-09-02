@@ -12,25 +12,53 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list>
-    <ion-item>
-      <ion-label position="floating">Nombre</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+  <!-- Formulario -->
+  <form (ngSubmit)="onRegister()">
+    <ion-list>
+      <app-input
+        label="Nombre"
+        type="text"
+        [(model)]="name"
+        name="name"
+        [required]="true">
+      </app-input>
 
-    <ion-item>
-      <ion-label position="floating">Correo</ion-label>
-      <ion-input type="email"></ion-input>
-    </ion-item>
+      <app-input
+        label="Apellido"
+        type="text"
+        [(model)]="lastName"
+        name="lastName"
+        [required]="true">
+      </app-input>
 
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-  </ion-list>
+      <app-input
+        label="Correo"
+        type="email"
+        [(model)]="email"
+        name="email"
+        [required]="true">
+      </app-input>
 
-  <ion-button expand="block" color="success" class="ion-margin-top">
-    Registrarse
-  </ion-button>
+      <app-input
+        label="Contraseña"
+        type="password"
+        [(model)]="password"
+        name="password"
+        [required]="true">
+      </app-input>
+
+      <app-select
+        label="País"
+        placeholder="Selecciona tu país"
+        [options]="countries"
+        [(value)]="country">
+      </app-select>
+    </ion-list>
+
+    <ion-button expand="block" color="success" class="ion-margin-top" type="submit">
+      Registrarse
+    </ion-button>
+  </form>
 
 </ion-content>
+

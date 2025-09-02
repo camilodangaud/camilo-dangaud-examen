@@ -1,34 +1,30 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
-    standalone: false,
+  standalone: false,
 })
 export class LoginPage {
-  email: string = '';
-  password: string = '';
-  showPassword: boolean = false;
+  email = '';
+  password = '';
 
-  constructor(private router: Router) {}
-
-  togglePassword() {
-    this.showPassword = !this.showPassword;
-  }
+  constructor(private authService: AuthService, private router: Router) {}
 
   onLogin() {
-    // Aquí validas las credenciales
-    if (this.email === 'jane@doe.com' && this.password === '123456') {
-      console.log('Login correcto');
-      this.router.navigate(['/home']); 
+    const ok = this.authService.login(this.email, this.password);
+    if (ok) {
+      this.router.navigate(['/home']);
     } else {
-      console.log('Credenciales incorrectas');
+      alert('Credenciales incorrectas');
     }
   }
 
   goToRegister() {
-    this.router.navigate(['/register']); 
+    this.router.navigate(['/register']);
   }
 }
+
