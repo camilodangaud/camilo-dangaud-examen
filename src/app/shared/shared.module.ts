@@ -11,7 +11,6 @@ import { PrincipalNewsComponent } from '../components/principal-news/principal-n
 import { HeaderComponent } from '../components/header/header.component';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
 import { ListComponent } from '../components/list/list.component';
-import { UserFormComponent } from '../components/user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +22,7 @@ import { UserFormComponent } from '../components/user-form/user-form.component';
     HeaderComponent,
     SidebarComponent,
     ListComponent,
-    UserFormComponent
-  ],
+    ],
   imports: [
     CommonModule,
     FormsModule,
@@ -40,7 +38,6 @@ import { UserFormComponent } from '../components/user-form/user-form.component';
     HeaderComponent,
     SidebarComponent,
     ListComponent,
-    UserFormComponent
   ]
 })
 export class SharedModule {}
