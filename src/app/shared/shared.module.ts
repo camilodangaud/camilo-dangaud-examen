@@ -6,13 +6,11 @@ import { IonicModule } from '@ionic/angular';
 import { InputComponent } from '../components/input/input.component';
 import { SelectComponent } from '../components/select/select.component';
 import { ButtonComponent } from '../components/button/button.component';
-import { LinkComponent } from '../components/link/link.component';
 import { CardComponent } from '../components/card/card.component';
 import { PrincipalNewsComponent } from '../components/principal-news/principal-news.component';
 import { HeaderComponent } from '../components/header/header.component';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
 import { ListComponent } from '../components/list/list.component';
-import { ModalComponent } from '../components/modal/modal.component';
 import { UserFormComponent } from '../components/user-form/user-form.component';
 
 @NgModule({
@@ -20,13 +18,11 @@ import { UserFormComponent } from '../components/user-form/user-form.component';
     InputComponent,
     SelectComponent,
     ButtonComponent,
-    LinkComponent,
     CardComponent,
     PrincipalNewsComponent,
     HeaderComponent,
     SidebarComponent,
     ListComponent,
-    ModalComponent,
     UserFormComponent
   ],
   imports: [
@@ -39,13 +35,11 @@ import { UserFormComponent } from '../components/user-form/user-form.component';
     InputComponent,
     SelectComponent,
     ButtonComponent,
-    LinkComponent,
     CardComponent,
     PrincipalNewsComponent,
     HeaderComponent,
     SidebarComponent,
     ListComponent,
-    ModalComponent,
     UserFormComponent
   ]
 })

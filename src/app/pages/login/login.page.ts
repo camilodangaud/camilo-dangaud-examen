@@ -27,4 +27,3 @@ export class LoginPage {
     this.router.navigate(['/register']);
   }
 }
-

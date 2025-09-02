@@ -11,7 +11,6 @@ import { AuthService } from '../../services/auth.service';
 export class SidebarComponent {
   menuItems = [
     { icon: 'person-outline', label: 'Perfil', action: 'profile' },
-    { icon: 'lock-closed-outline', label: 'Cambiar Contraseña', action: 'change-password' },
     { icon: 'log-out-outline', label: 'Cerrar Sesión', action: 'logout' },
   ];
 
@@ -21,9 +20,6 @@ export class SidebarComponent {
     switch (action) {
       case 'profile':
         this.router.navigate(['/profile']);
-        break;
-      case 'change-password':
-        this.router.navigate(['/change-password']); // ⚡ si tienes página de cambio de contraseña
         break;
       case 'logout':
         this.authService.logout();
