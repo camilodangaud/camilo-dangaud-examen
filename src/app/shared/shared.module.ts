@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
-// 👇 importa todos los componentes generados
 import { InputComponent } from '../components/input/input.component';
 import { SelectComponent } from '../components/select/select.component';
 import { ButtonComponent } from '../components/button/button.component';

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-principal-news',
@@ -6,10 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./principal-news.component.scss'],
   standalone: false,
 })
-export class PrincipalNewsComponent  implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
-
+export class PrincipalNewsComponent {
+  @Input() news: { title: string; description: string; image?: string; date?: string }[] = [];
+  @Input() limit: number = 4;
 }

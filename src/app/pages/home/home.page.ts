@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { News } from 'src/app/services/news';
+import { NewsService } from '../../services/NewsService'; 
 
 @Component({
   selector: 'app-home',
@@ -9,12 +9,18 @@ import { News } from 'src/app/services/news';
 })
 export class HomePage implements OnInit {
   news: any[] = [];
+  principalNews: any[] = [];
 
-  constructor(private newsService: News) {}
+  constructor(private newsService: NewsService) {}
 
   ngOnInit() {
+    this.loadNews();
+  }
+
+  loadNews() {
     this.newsService.getNews().subscribe((data: any) => {
-      this.news = data.articles;
+      this.news = data.articles || [];
+      this.principalNews = this.news.slice(0, 4);
     });
   }
 }
