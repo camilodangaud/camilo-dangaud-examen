@@ -31,7 +31,6 @@ export class AuthService {
       return false;
     }
 
-    // Encriptar contraseña antes de guardarla
     user.password = CryptoJS.SHA256(user.password).toString(CryptoJS.enc.Hex);
 
     users.push(user);

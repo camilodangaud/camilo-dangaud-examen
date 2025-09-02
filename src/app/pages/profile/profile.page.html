@@ -20,7 +20,6 @@
     </ion-card-header>
   </ion-card>
 
-  <!-- Formulario de edición -->
   <ion-list *ngIf="editing">
     <ion-item>
       <ion-label position="stacked">Nombre</ion-label>
@@ -41,7 +40,6 @@
     <ion-button expand="block" (click)="saveChanges()">Guardar Cambios</ion-button>
   </ion-list>
 
-  <!-- Formulario de cambio de contraseña -->
   <ion-list *ngIf="changingPassword">
     <ion-item>
       <ion-label position="stacked">Contraseña actual</ion-label>
@@ -58,7 +56,6 @@
     <ion-button expand="block" (click)="changePassword()">Cambiar Contraseña</ion-button>
   </ion-list>
 
-  <!-- Acciones -->
   <ion-list *ngIf="!editing && !changingPassword">
     <ion-item button (click)="toggleEdit()">
       <ion-icon name="person-outline" slot="start"></ion-icon>
